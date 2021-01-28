@@ -9,5 +9,27 @@
   <link rel="stylesheet" href="styles.51e0801d968dfc940eb6.css"></head>
   <body>
     <app-root></app-root>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v9.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="101455665299154" logged_in_greeting="Hi! You may start by saying " i="" want="" to="" order="" a="" pizza"."="" logged_out_greeting="Hi! You may start by saying ">
+    </div>
   <script src="runtime.0e49e2b53282f40c8925.js" defer></script><script src="polyfills.8c151b8375e767ff858f.js" defer></script><script src="main.abc31d1062c22bfd4e93.js" defer></script></body>
 </html>
